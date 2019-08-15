@@ -41,6 +41,7 @@ void PWM0_CH0_SetDuty(uint16_t d)
 
 void PWM0_CH0_Init(uint16_t uFrequency)
 {
+	P12_PUSHPULL_MODE;	//Add this to enhance MOS output capability	
     PWM0_P12_OUTPUT_ENABLE;
   
     PWM_IMDEPENDENT_MODE;
